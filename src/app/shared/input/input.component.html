@@ -1,0 +1,37 @@
+<input [type]="type" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+          duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400" [placeholder]="placeholder"
+  [formControl]="control" [mask]="format" [dropSpecialCharacters]="false"/>
+<ng-container *ngIf="control?.touched && control?.dirty">
+  <!-- GLOBAL INPUT VALIDATION -->
+  <p class="text-red-400" *ngIf="control.errors?.['required']">
+    Field is required.
+  </p>
+
+  <!-- NAME INPUT VALIDATION -->
+  <p class="text-red-400" *ngIf="control.errors?.['minlength']">
+    You have inpputed
+    {{ control.errors?.['minlength'].actualLength }}
+    character long.
+    {{ control.errors?.['minlength'].requiredLength }}
+    character minimum is requiered.
+  </p>
+
+  <!-- EMAIL INPUT VALIDATION -->
+  <p class="text-red-100" *ngIf="control.errors?.['email']">
+    Enter a valid email.
+  </p>
+
+  <!-- AGE INPUT VALIDATION -->
+  <p class="text-red-400" *ngIf="control.errors?.['min']">
+    Age below minumu requiered.
+  </p>
+  <p class="text-red-400" *ngIf="control.errors?.['max']">
+    Age above maximum requered.
+  </p>
+
+  <!-- PASSWORD INPUT VALIDATION -->
+  <p class="text-red-400" *ngIf="control.errors?.['pattern']">
+    Passwords must be at least 8 characters long, have 1 uppercase
+    letter, 1 lowercase letter, and 1 number.
+  </p>
+</ng-container>

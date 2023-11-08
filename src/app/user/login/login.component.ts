@@ -8,4 +8,8 @@ import { Component } from "@angular/core";
 
 export class LoginComponent {
     
+    credential = {
+        email: "hello world",
+        password: ""
+    };
 }
