@@ -12,4 +12,8 @@ export class LoginComponent {
         email: "hello world",
         password: ""
     };
+
+    login() {
+        console.log("login")
+    }
 }
