@@ -21,6 +21,11 @@
     Enter a valid email.
   </p>
 
+  <!-- EMAIL INPUT VALIDATION -->
+  <p class="text-red-100" *ngIf="control.errors?.['emailTaken']">
+    Email already taken.
+  </p>
+
   <!-- AGE INPUT VALIDATION -->
   <p class="text-red-400" *ngIf="control.errors?.['min']">
     Age below minumu requiered.
@@ -33,5 +38,10 @@
   <p class="text-red-400" *ngIf="control.errors?.['pattern']">
     Passwords must be at least 8 characters long, have 1 uppercase
     letter, 1 lowercase letter, and 1 number.
+  </p>
+
+  <!-- CONFIRM PASSWORD INPUT VALIDATION -->
+  <p class="text-red-400" *ngIf="control.errors?.['noMatch']">
+    Password do not match.
   </p>
 </ng-container>

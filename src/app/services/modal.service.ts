@@ -1,4 +1,3 @@
-import { Element } from "@angular/compiler";
 import { Injectable } from "@angular/core";
 
 interface IModal {

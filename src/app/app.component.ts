@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { ModalService } from "./services/modal.service";
+import { AuthService } from "./services/auth.service";
 
 @Component({
     selector: "app-root",
@@ -10,7 +11,7 @@ import { ModalService } from "./services/modal.service";
 export class AppComponent {
     // showModal = true
 
-    constructor(private modal: ModalService){}
+    constructor(private modal: ModalService, public auth: AuthService){}
 
     // ngOnInit() {
     //     setInterval(() => {
