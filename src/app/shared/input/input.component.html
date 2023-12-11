@@ -17,18 +17,18 @@
   </p>
 
   <!-- EMAIL INPUT VALIDATION -->
-  <p class="text-red-100" *ngIf="control.errors?.['email']">
+  <p class="text-red-400" *ngIf="control.errors?.['email']">
     Enter a valid email.
   </p>
 
   <!-- EMAIL INPUT VALIDATION -->
-  <p class="text-red-100" *ngIf="control.errors?.['emailTaken']">
+  <p class="text-red-400" *ngIf="control.errors?.['emailTaken']">
     Email already taken.
   </p>
 
   <!-- AGE INPUT VALIDATION -->
   <p class="text-red-400" *ngIf="control.errors?.['min']">
-    Age below minumu requiered.
+    Age below minimum requiered.
   </p>
   <p class="text-red-400" *ngIf="control.errors?.['max']">
     Age above maximum requered.

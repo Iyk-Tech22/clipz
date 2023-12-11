@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 
-
 @Component({
     selector: "app-login",
     templateUrl: "./login.component.html",
@@ -16,14 +15,17 @@ export class LoginComponent {
         email: "",
         password: ""
     };
-    alertMsg = "Please wait, We are authencating you...";
+    alertMsg = "";
     alertShow = false;
     alertColor = "blue";
     isSubmission = false;
 
     async login() {
-        this.alertShow = !this.alertShow;
+        this.alertMsg = "Please wait, We are authencating you...";
+        this.alertColor = "blue";
+        this.alertShow = true;
         this.isSubmission = !this.isSubmission;
+       
         try{
             await this.auth.signInWithEmailAndPassword(
                 this.credential.email, this.credential.password

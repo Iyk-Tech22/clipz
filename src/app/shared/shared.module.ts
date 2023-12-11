@@ -8,6 +8,7 @@ import { TabComponent } from "./tab/tab.component"
 import { TabContainerComponent } from "./tab-container/tab-container.component";
 import { InputComponent } from "./input/input.component";
 import { AlertComponent } from "./alert/alert.component";
+import { EventBlockerDirective } from "./directive/event-blocker.component";
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { AlertComponent } from "./alert/alert.component";
         TabComponent,
         TabContainerComponent,
         InputComponent,
-        AlertComponent
+        AlertComponent,
+        EventBlockerDirective
     ],
     imports:[
         CommonModule,
@@ -27,7 +29,8 @@ import { AlertComponent } from "./alert/alert.component";
         TabComponent,
         TabContainerComponent,
         InputComponent,
-        AlertComponent
+        AlertComponent,
+        EventBlockerDirective
     ],
     providers: [provideNgxMask()]
 })
