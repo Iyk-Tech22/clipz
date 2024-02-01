@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from "./about/about.component";
 import { ClipComponent } from "./clip/clip.component";
 import { NotFoundComponent } from "./404/404.component";
+import { ClipService } from "./services/clip.service";
 
 const routes: Routes = [
     {
@@ -19,7 +20,14 @@ const routes: Routes = [
         component: ClipComponent,
         data:{
             authOnly: true
+        },
+        resolve: {
+            clip: ClipService
         }
+    },
+    {
+        path: '',
+        loadChildren: async () =>  ( await import("../app/video/video.module")).VideoModule
     },
     {
         path: "**",

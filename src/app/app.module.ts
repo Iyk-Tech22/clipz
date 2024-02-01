@@ -6,12 +6,16 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth"
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore"
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing-module';
-import { VideoModule } from './video/video.module';
+import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component'
 import { ClipComponent } from './clip/clip.component';
 import { NotFoundComponent } from './404/404.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ClipListComponent } from './cliplist/clip-list.component';
+import { FbTimestampPipe } from './pipes/pipe.fb-timestamp';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { NotFoundComponent } from './404/404.component';
     AppComponent,
     NavComponent,
     ClipComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeComponent,
+    AboutComponent,
+    ClipListComponent,
+    FbTimestampPipe
   ],
   imports: [
     BrowserModule,
@@ -27,10 +35,9 @@ import { NotFoundComponent } from './404/404.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    VideoModule,
     AppRoutingModule,
-    
-    ],
+    AngularFireStorageModule,
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

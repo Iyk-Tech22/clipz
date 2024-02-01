@@ -31,10 +31,6 @@ const routes: Routes = [
 ]
 
 @NgModule({
-    declarations: [
-        ManageComponent,
-        UploadComponent
-    ],
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
