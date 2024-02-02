@@ -27,4 +27,4 @@ Videojs is framework build on top of HTML5 to provide better video player in the
 
 ## Demo Site
 
-[click here to visit clipz]()
+[click here to visit clipz](https://clipz-ten-sandy.vercel.app/)
