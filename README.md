@@ -1,27 +1,30 @@
 # Clipz
+Clipz is a video hub designed to allow users to upload videos of their liking, it also offer video rendering
+users can watch videos uploaded by other users.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+## Core Tools
+The core packages and dependecies, which use to build clipz are listed below.
 
-## Development server
+- AngularJs
+- Firebase
+- FFmpeg
+- Videojs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### AngularJS
+AngularJs is frontend framework, provide a powerful feature to build medium to large scale project,
+It's does a good work on that, features it offer makes it easy to build frontend project quick and easy.
+clipz was build with it.
 
-## Code scaffolding
+### Firebase
+Firebase is SaaS owned by google, it serve as effcient tool handling the backend feature of clipz, such as
+authentication, authorisation, database, storage object.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### FFmpeg
+FFmpeg is software build to provide  ffmpeg native software use for processing video and audio. To to the browser environment using WebAssembly handle task that require high computation power.
 
-## Build
+### Videojs
+Videojs is framework build on top of HTML5 to provide better video player in the browser.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Demo Site
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[click here to visit clipz]()
